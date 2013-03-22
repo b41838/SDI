@@ -2,7 +2,7 @@
  * 
  * Author: Kyler Schroeder
  * Created for: SDI Online
- * Week Three project, Tardaaaaaar!.
+ * Week Three project, Interview with Tardar!.
  * 
  */
 
@@ -10,9 +10,13 @@
 var grumpyCat = {
 	name: "Tardar Sauce",
 	grumpy: true,
-	hatedThings: 12,
-	iHate: [ "spring", "outdoors", "christmas", "flowers", "babies", "people", "barney", "smiles", "internet explorer", "cuddly things", "friskeys", "me", "you"],
-	brother: [ pokey, "Pokey" ]
+	hatedThings: 1.7976931348623157E+10308,
+	iHateMost: [ "spring", "outdoors", "christmas", "flowers", "babies", "people", "barney", "smiles", "internet explorer", "cuddly things", "friskeys", "unicorns", "you"],
+	brother: [ pokey, "Pokey" ],
+	isGrumpy: function() {
+							var grump = grumpyCat.grumpy;
+						 	return (grump);
+						 }
 }
 
 var pokey = {
@@ -25,8 +29,8 @@ function func1(x, y) {
 
 function func2(love, hate) {
 	console.log("Someone asked me if I hate my little brother.  Do i?")
-	for(var i = 0; i < love.iHate.length; i++) {
-		if(grumpyCat.iHate[i] = hate) {
+	for(var i = 0; i < love.iHateMost.length; i++) {
+		if(grumpyCat.iHateMost[i] = hate) {
 			console.log("Yes, is that mean?  GOOD.")
 			return;
 		}
@@ -41,6 +45,38 @@ function func2(love, hate) {
 
 
 
+function func4() {
+	var i = 0;
+	
+	while(i < grumpyCat.iHateMost.length) {
+		console.log(grumpyCat.iHateMost[i]);
+		i++;
+	}	
+};
 
-var1 = func1("took pictures", "aweful");
-func2(grumpyCat, grumpyCat.brother[0]);
+
+/*function func5(boom) {
+	var thisMany = 100;
+	var i = 0;
+	
+	console.log("Tardar, count how many things make you grumpy.");
+	
+	while(i < thisMany) {
+		console.log(i); 
+		i+=10;
+	}
+	
+	console.log("Ok, Ok.  That's a lot of grump, approxamently how many things total make you grumpy?");
+	return (boom);
+	console.log(boom);
+}*/
+
+
+
+
+
+var1 = func1("took pictures", "aweful"); // string
+var2 = func2(grumpyCat, grumpyCat.brother[0]); // object, array
+console.log("I wonder, is Tardar grumpy right now?  " + grumpyCat.isGrumpy() + "."); // boolean
+var4 = func4();
+//var5 = func5(grumpyCat.hatedThings); // number
