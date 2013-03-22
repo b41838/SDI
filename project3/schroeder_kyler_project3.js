@@ -14,9 +14,13 @@ var grumpyCat = {
 	iHateMost: [ "spring", "outdoors", "christmas", "flowers", "babies", "people", "barney", "smiles", "internet explorer", "cuddly things", "friskeys", "unicorns", "you"],
 	brother: [ pokey, "Pokey" ],
 	isGrumpy: function() {
-							var grump = grumpyCat.grumpy;
-						 	return (grump);
-						 }
+		var grump = grumpyCat.grumpy;
+		return (grump);
+	},
+	indecision: function(bleh) {
+		grumpyCat.iHateMost[8] = bleh;
+		return bleh;
+	}
 }
 
 var pokey = {
@@ -44,18 +48,7 @@ function func2(love, hate) {
 
 
 
-
-function func4() {
-	var i = 0;
-	
-	while(i < grumpyCat.iHateMost.length) {
-		console.log(grumpyCat.iHateMost[i]);
-		i++;
-	}	
-};
-
-
-/*function func5(boom) {
+function func5(boom) {
 	var thisMany = 100;
 	var i = 0;
 	
@@ -69,14 +62,13 @@ function func4() {
 	console.log("Ok, Ok.  That's a lot of grump, approxamently how many things total make you grumpy?");
 	return (boom);
 	console.log(boom);
-}*/
-
-
-
+}
 
 
 var1 = func1("took pictures", "aweful"); // string
 var2 = func2(grumpyCat, grumpyCat.brother[0]); // object, array
 console.log("I wonder, is Tardar grumpy right now?  " + grumpyCat.isGrumpy() + "."); // boolean
-var4 = func4();
-//var5 = func5(grumpyCat.hatedThings); // number
+
+console.log("I take it back, I don't hate Internet Explorer, I just hate " + grumpyCat.indecision("Microsoft"));
+var5 = func5(grumpyCat.hatedThings); // number
+console.log(grumpyCat.hatedThings);
