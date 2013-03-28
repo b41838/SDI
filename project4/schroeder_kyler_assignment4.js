@@ -117,10 +117,16 @@ function biggerThan() {
 
 
 // Find the total value of just the numbers in an array, even if some of the items are not numbers.
-function totalOfNumbers() {
-
-
-
+function totalOfNumbers(array) {
+	var sum = 0;
+	
+	for(var i = 0, j = array.length; i < j; i++) {
+		if(array[i]/1 === array[i]) {
+			sum += array[i];
+		};
+	};
+	
+	return sum;
 };
 
 
@@ -136,6 +142,10 @@ function sortedArray(array, key) {
 
 
 // validNumber("123-456-7890");
+
+// Finds the sum of all numbers in a mixed array. - also works!
+var mixedArray = ["10", 4, false, "moonshine", 8, 27, "no"]
+console.log(totalOfNumbers(mixedArray));
 
 // Sorts array by key - totally works!
 var nonSortedArray = [{a:1}, {a:5}, {a:3}, {a:2}, {a:4}, {b:1}];
