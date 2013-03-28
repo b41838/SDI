@@ -12,36 +12,33 @@ function validNumber(gimme) {
 	// var gimme = 0;
     var chopIt = gimme.split('-'); // this is an array containing the items
 
-	for (var i = 0; i < chopIt.length; i++) {
-		if(isNaN(chopIt[i])) {
-    		console.log("Negative Ghost Rider."); // true, chopIt[i] is not a number
-    	}
-    	else {
-    		console.log("Word.") // false, chopIt[i] is a number
-    	}
-	}
+	if(chopIt.length === 3) {
 
-	var end1 = gimme.indexOf("-");
+		for (var i = 0; i < chopIt.length; i++) {
+			if(isNaN(chopIt[i])) {
+    			console.log("Negative Ghost Rider."); // true, chopIt[i] is not a number
+    		}
+    		else {
+    			console.log("Word.") // false, chopIt[i] is a number
+    		}
+		}
+
+		if(chopIt[0].length === 3 && chopIt[1].length === 3 && chopIt[2].length === 4) {
+		
+			return true;
+		} else {
+			return false;
+		}
+	/*var end1 = gimme.indexOf("-");
 	var start2 = gimme.indexOf("-")+1;
 	var end2 = gimme.lastIndexOf("-");
 	var start3 = gimme.lastIndexOf("-")+1
-	var end3 = gimme.length;
+	var end3 = gimme.length;*/
 	
-	console.log(gimme.substring(0, end1) + gimme.substring(start2, end2) + gimme.substring(start3, end3));
-
-	/*var whereDash = gimme.length;
-	for (var ni = 0; ni <= whereDash; ni++) {
-		if (gimme.substring(ni, ni+1) === "-") {
-			// return ni+1;
-			console.log("1");
-			for (var j = ni; j <= whereDash; j++) {
-				if gimme.substring(j, j+1) === "-")
-				console.log("2");
-			}
+		} else {
+			console.log("fail.")
 		}
-	}*/
-
-}
+	}
 
 // Does a string follow an aaa@bbb.ccc pattern like an email address?
 function emailVal() {
@@ -109,11 +106,23 @@ function stringVersion() {
 
 
 // Find the smallest value in an array that is greater than a given number
-function biggerThan() {
-
-
-
-}
+function biggerThan(array, minValue) {
+	array.sort(function(a, b) {
+		return a-b;
+	});
+	if(minValue >= array[0] && minValue < array[array.length - 1]) {
+		array.push(minValue);
+		array.sort(function(a, b) {
+			return a-b;
+		});
+		
+		var biggerValue = array[array.indexOf(minValue) + 1];
+		return biggerValue;
+	}
+	else {
+		return null;
+	};
+};
 
 
 // Find the total value of just the numbers in an array, even if some of the items are not numbers.
@@ -141,7 +150,11 @@ function sortedArray(array, key) {
 
 
 
-// validNumber("123-456-7890");
+validNumber("123-456-7890");
+
+// Find the smallest number that is bigger than the passed argument - works!
+var unorderedArray = [7, 4, 1, 9, 16, 2, 42, 17];
+console.log(biggerThan(unorderedArray, 5));
 
 // Finds the sum of all numbers in a mixed array. - also works!
 var mixedArray = ["10", 4, false, "moonshine", 8, 27, "no"]
