@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<!-- Kyler Schroeder
+	 Project 1 - iPill Keeper
+	 Visual Frameworks 1304
+	 Full Sail University -->
+	 
+<html lang="en">
+	<head>
+
+		<title>iPill Keeper</title>
+		<meta charset="UTF-8" />
+		<meta name="author" content="Kyler Schroeder" />
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+		<meta name="keywords" content="Pills, Reminder, Diabetes" />
+		<meta name="description" content="A simple pill reminder application for diabetes patients." />
+		<meta name="robots" content="index" />
+
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+	</head>
+
+	<body> <!-- Starting content section of code -->
+		<div> <!-- Container div -->
+			<header> <!-- Page heading -->
+				<h1>Add a Pill</h1>
+			</header>
+			
+			<section> <!-- Collects user input -->
+				<form action="#" method="post">
+					<fieldset>
+						<legend>Pill Info</legend> <!-- Displays form title -->
+
+						<ul>
+							<li><label for="date">Date: </label><input type="datetime-local" /></li>
+							<li><label for="sugarLevel">Blood Sugar Level: </label> <!-- Start dropdown menu -->
+								<select id="sugarLevel">
+									<optgroup label="Green">
+										<option value="littleLow">A Little Low</option>
+										<option value="littleHigh">A Little High</option>
+									</optgroup>
+									<optgroup label="Yellow">
+										<option value="low">Low</option>
+										<option value="high">High</option>
+									</optgroup>
+									<optgroup label="Red">
+										<option value="extremelyLow">Extremely Low</option>
+										<option value="extremelyHigh">Extremely High</option>
+									</optgroup>
+								</select></li> <!-- End dropdown menu -->
+							<li><label for="pillName">Name: </label><input type="text" placeholder="Michael Meyers" /></li>
+							<li><label for="quantity">Quantity: </label><input type="range" name="quan" min"1" max"10" /></li>
+							<li><label for="req">Required? </label><input type="checkbox" value="req" id="required"  /></li>
+							<li><label for="notes">Notes: </label>
+							<textarea id="notes" ></textarea></li>
+						</ul>
+						
+					</fieldset>
+
+					<input type="submit" value="Mark It!" />
+					<input type="hidden" name="Add_a_Pill" />
+				</form>
+			
+			</section>
+			
+			<br /><br />
+			
+			<section>
+				<nav>
+					<a href="#">Clear Stored Data</a> | <a href="#">Display Data</a>
+				</nav>
+			</section>
+			
+			<footer>
+				<p>
+					&copy; Copyright 2013 - Kyler Schroeder
+				</p>
+			</footer>
+		</div>
+	</body>
+</html>
