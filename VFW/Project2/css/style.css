@@ -53,6 +53,10 @@ legend {
 	text-align:center;
 }
 
+.activeBox {
+	border:solid 1px #BF2C53;
+}
+
 footer {
 	text-align:center;
 	font-size:10px;

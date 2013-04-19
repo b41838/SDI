@@ -4,9 +4,26 @@
 	 Visual Frameworks 1304
 	 Full Sail University	*/
 	
-alert("hello");
+alert("hi");
 
-function storeData() {
+window.addEventListener("DOMContentLoaded", function() {
+
+//alert("this works");
+
+var myText = document.getElementById("pillName");
+
+var applyBorder = function() {
+	myText.setAttribute("class", "activeBox");
+}
+
+var removeBorder = function() {
+	myText.removeAttribute("class", "activeBox");
+}
+
+myText.addEventListener("focus", applyBorder);
+myText.addEventListener("blur", removeBorder);
+
+/*function storeData() {
 	var id				= math.floor(Math.random()*1000001);
 	
 	var item			= {};
@@ -20,7 +37,14 @@ function storeData() {
 	// save into LocalStorage
 	localStorage.setItem(id, JSON.stringify(item));
 	alert("Save Successfull!");
-}
+}*/
+
+/*function storeData() {
+	localStorage.setItem("test", "hello");
+	alert(localStorage.length);
+}*/
 
 var save = $('submit');
 save.addEventListener("click", storeData);
+
+});
