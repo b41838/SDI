@@ -37,7 +37,7 @@
 						<legend>Pill Info</legend> <!-- Displays form title -->
 
 						<ul>
-							<li><label for="date">Date: </label><input type="datetime-local" /></li>
+							<li><label for="date">Date: </label><input type="datetime-local" id="date" /></li>
 							<li><label for="sugarLevel">Blood Sugar Level: </label> <!-- Start dropdown menu -->
 								<select id="sugarLevel">
 									<optgroup label="Green">
@@ -53,11 +53,11 @@
 										<option value="extremelyHigh">Extremely High</option>
 									</optgroup>
 								</select></li> <!-- End dropdown menu -->
-							<li><label for="pillName">Name: </label><input type="text" placeholder="Red Pill" /></li>
-							<li><label for="quantity">Quantity: </label><input type="range" name="quan" min"1" max"10" /></li>
-							<li><label for="req">Required? </label><input type="checkbox" value="req" id="required"  /></li>
+							<li><label for="pillName">Name: </label><input type="text" placeholder="Red Pill" id="pillName" /></li>
+							<li><label for="quantity">Quantity: </label><input type="range" name="quan" min"1" max"10" id="quantity" /></li>
+							<li><label for="req">Required? </label><input type="checkbox" value="req" id="required" id="req" /></li>
 							<li><label for="notes">Notes: </label>
-							<textarea id="notes" >&nbsp;</textarea></li>
+							<textarea id="notes" id="notes">&nbsp;</textarea></li>
 						</ul>
 						
 					</fieldset>
@@ -72,7 +72,7 @@
 			
 			<section id="links">
 				<nav>
-					<a href="#">Clear Stored Data</a> | <a href="#">Display Data</a>
+					<a href="#" id="clearLink">Clear Stored Data</a> | <a href="#" id="displayLink">Display Data</a>
 				</nav>
 			</section>
 			
