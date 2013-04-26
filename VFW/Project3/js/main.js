@@ -1,6 +1,5 @@
 /*   JavaScript Document
 	 Kyler Schroeder
-	 Project 2 - iPill Keeper
 	 Visual Frameworks 1304
 	 Full Sail University	*/
 

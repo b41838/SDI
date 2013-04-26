@@ -3,13 +3,17 @@
 	VFW 1304
 */
 
-// Link to project index
+// Link to gitHub repo
+https://github.com/b41838/SDI/tree/master/VFW/Project3
 
+// Link to project index
+https://github.com/b41838/SDI/blob/master/VFW/Project3/index.html
 
 // Link to project addItems page
-
+https://github.com/b41838/SDI/blob/master/VFW/Project3/addItem.html
 
 // Link to .js file
-
+https://github.com/b41838/SDI/blob/master/VFW/Project3/js/main.js
 
 // Link to .css file
+https://github.com/b41838/SDI/blob/master/VFW/Project3/css/style.css
