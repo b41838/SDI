@@ -80,6 +80,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		// save into LocalStorage with stringify
 		localStorage.setItem(id, JSON.stringify(item));
 		alert("Save Successfull!");
+		window.location.reload();
 	}
 
 	function getData() {
@@ -106,7 +107,7 @@ window.addEventListener("DOMContentLoaded", function() {
 			var obj = JSON.parse(value);
 			var makeSubList = document.createElement('ul');
 			makeLi.appendChild(makeSubList);
-			grabImage(obj.group[1], makeSubList);
+			grabImage(obj.sugar[1], makeSubList);
 			//grabImage(makeSubList);
 			for (var n in obj) {
 				var makeSubLi = document.createElement('li');
